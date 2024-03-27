@@ -1,0 +1,34 @@
+header {
+  height: 92px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 64px;
+  position: fixed;
+  width: 96vw;
+  top: 0;
+  background-color: white;
+  > div {
+    > img {
+      height: 48px;
+    }
+  }
+}
+
+.burger_menu {
+  height: 32px;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-right: 64px;
+  &:hover {
+    cursor: pointer;
+  }
+  > div {
+    width: 40px;
+    height: 0px;
+    background-color: black;
+    border: 2px solid black;
+  }
+}
