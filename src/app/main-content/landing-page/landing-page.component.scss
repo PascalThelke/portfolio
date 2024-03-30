@@ -1,12 +1,5 @@
-$primary_color: rgb(0, 188, 143);
-$main_font: Syne, Arial, Helvetica, sans-serif;
-$secondary_font: Overpass, Arial, Helvetica, sans-serif;
+@import '../main-content.component.scss';
 
-@mixin fontDesingSmall() {
-  font-family: $secondary_font;
-  font-weight: 300;
-  font-size: 23px;
-}
 
 h1 {
   font-family: $main_font;
