@@ -1,1 +1,107 @@
 @import "../../app.component.scss";
+
+app-join{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+app-sharkie{
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+h2 {
+  @include fontDesingLarge();
+  cursor: default;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  &:hover {
+    color: $primary_color;
+  }
+}
+
+span {
+  @include fontDesingMedium();
+}
+
+.project_container {
+  margin-top: 124px;
+  display: flex;
+  gap: 124px;
+
+}
+
+.project_image_container {
+  width: 620px;
+  height: 393px;
+  border: solid transparent 4px;
+  transition: all 125ms ease-out;
+//   filter: grayscale(100%);
+  > img {
+    width: 620px;
+    height: 393px;
+    border: 1px solid black;
+    margin: -16px;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: -1;
+    cursor: pointer;
+  }
+  &:hover {
+    border: solid 4px black;
+    // filter: grayscale(0%);
+  }
+}
+
+.description_container {
+  width: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+//   transform: translateX(-135%);
+  transition: all 75ms ease-in-out;
+  > h3 {
+    font-family: $main_font;
+    font-weight: $large_weight;
+    font-size: 45px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    cursor: pointer;
+    &:hover {
+      color: $primary_color;
+    }
+  }
+  > button {
+    width: 164px;
+    height: 68px;
+    background-color: white;
+    border: 4px solid black;
+    @include fontDesingMedium();
+    transition: all 75ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+      font-weight: bold;
+      color: white;
+      background-color: black;
+    }
+  }
+}
+
+#used_stack {
+  @include fontDesingMedium();
+  color: $primary_color;
+  line-height: 27.6px;
+}
+
+.row_rev{
+    flex-direction: row-reverse;
+}
+
+.pos_off_rev{
+    margin: -16px 0px 0px 16px !important;
+}

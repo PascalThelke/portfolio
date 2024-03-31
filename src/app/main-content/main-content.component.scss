@@ -1,12 +1,18 @@
 app-about-me {
   display: flex;
   justify-content: space-around;
-  height: 100vh;
+  height: 90vh;
 }
 
 app-my-skills{
     display: flex;
-    height: 100vh;
+    height: 90vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+app-portfolio{
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
