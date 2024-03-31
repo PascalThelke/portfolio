@@ -1,0 +1,24 @@
+$primary_color: rgb(0, 188, 143);
+$main_font: Syne, Arial, Helvetica, sans-serif;
+$secondary_font: Overpass, Arial, Helvetica, sans-serif;
+$smallest_weight: 300;
+$medium_weight: 400;
+$large_weight: 800;
+
+@mixin fontDesingSmall() {
+  font-family: $secondary_font;
+  font-weight: $smallest_weight;
+  font-size: 23px;
+}
+
+@mixin fontDesingMedium() {
+  font-family: $secondary_font;
+  font-weight: $medium_weight;
+  font-size: 23px;
+}
+
+@mixin fontDesingLarge() {
+    font-family: $main_font;
+    font-weight: $large_weight;
+    font-size: 78px;
+  }
