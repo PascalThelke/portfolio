@@ -12,6 +12,7 @@
     align-self: center;
     @include fontDesingMedium();
     transition: all 75ms ease-in-out;
+    background-color: white;
     cursor: pointer;
     &:hover {
       font-weight: bold;

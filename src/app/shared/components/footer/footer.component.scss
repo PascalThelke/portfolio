@@ -1,0 +1,59 @@
+@import "../../../app.component.scss";
+
+footer {
+  height: 124px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 0px 64px 0px 64px;
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    > span {
+      font-family: Poppins, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 23px;
+    }
+  }
+}
+
+.personal_logo {
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.social_icons_container {
+  width: 204px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  >a{
+    &:hover {
+        transition: all 125ms ease-out;
+        transform: translateY(-8px);
+      }
+  }
+}
+
+.legal_link {
+  align-self: flex-end;
+  text-decoration: none;
+  color: white;
+  font-family: $secondary_font;
+  font-weight: $medium_weight;
+  font-size: 16px;
+
+  &:hover {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: $primary_color;
+    text-decoration-thickness: 3px;
+    gap: 3px;
+   
+  }
+}
