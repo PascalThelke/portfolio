@@ -17,6 +17,12 @@ $large_weight: 800;
   font-size: 23px;
 }
 
+@mixin fontDesingLarge() {
+    font-family: $main_font;
+    font-weight: $large_weight;
+    font-size: 78px;
+  }
+
 app-about-me {
   display: flex;
   justify-content: space-around;
@@ -24,8 +30,10 @@ app-about-me {
 }
 
 app-my-skills{
-    display: block;
+    display: flex;
     height: 100vh;
+    align-items: center;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 1225px){

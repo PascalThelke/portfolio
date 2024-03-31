@@ -1,0 +1,64 @@
+@import "../main-content.component.scss";
+
+.my_skills_container {
+  width: 85%;
+  height: 592px;
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+  > div {
+    height: 124px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > img {
+      height: 75px;
+      width: 75px;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 104px;
+      width: 100px;
+      gap: 10px;
+      transition: all 125ms ease-in-out;
+      > span {
+        font-family: $secondary_font;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        cursor: default;
+      }
+      &:hover {
+        color: $primary_color;
+        scale: 1.2;
+      }
+    }
+  }
+}
+
+.headline_container {
+  height: 98px;
+  width: 561px;
+  text-align: center;
+  background-color: white;
+  margin-bottom: -48px;
+  position: relative;
+  z-index: 1;
+  > h2 {
+    @include fontDesingLarge();
+    text-wrap: nowrap;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    &:hover{
+        color: $primary_color;
+        cursor: default;
+    }
+  }
+}
