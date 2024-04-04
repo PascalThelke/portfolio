@@ -3,18 +3,30 @@
     <span>Want to discuss a new project?</span>
     <p>Say hello! let's discuss your ideas and make it happen</p>
 </div>
-<form action="">
-    <input required type="text" id="name" name="name" placeholder="Your name">
-    <input required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
-    <textarea required name="message" id="message" placeholder="Your message" minlength="12"></textarea>
+<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="Your name">
+    @if (!name.valid && name.touched) {
+        <span class="invalid_entry_textfield">Please enter a name </span>
+    }
+    <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    @if (!email.valid && email.touched) {
+        <span class="invalid_entry_textfield">Please enter a valid email </span>
+    }
+    <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" placeholder="Your message" minlength="12"></textarea>
+    @if (!message.valid && message.touched) {
+        <span class="invalid_entry_textfield">Please enter a message with at least 12 digits </span>
+    }
     <div id="privacy_policy_checkbox_container">
         <div id="privacy_policy_checkbox_wrapper">
-            <img id="privacy_policy_checkbox_image" src="../../../assets/img/contact_me/check_box_outline_blank.svg" alt="">
+            <img #privacyPolicyCheckboxImage (click)="acceptPolicy($event)" id="privacy_policy_checkbox_image" src="../../../assets/img/contact_me/check_box_outline_blank.svg" alt="">
         </div>
         <span id="privacy_policy_text_container">
             I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
         </span>
     </div>
+    @if (!acceptedPolicy) {
+        <span class="invalid_entry_textfield">You have to accept the privacy policy </span>
+    }
     <button type="submit" >
         Send message
     </button>
