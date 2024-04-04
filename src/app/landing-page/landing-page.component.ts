@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  styleUrl: './landing-page.component.scss',
 })
-export class LandingPageComponent {
-
+export class LandingPageComponent implements OnInit {
+  ngOnInit(): void {
+    console.log('Klappt!');
+  }
 }

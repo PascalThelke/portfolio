@@ -1,0 +1,21 @@
+<h2>Say Hi!</h2>
+<div>
+    <span>Want to discuss a new project?</span>
+    <p>Say hello! let's discuss your ideas and make it happen</p>
+</div>
+<form action="">
+    <input required type="text" id="name" name="name" placeholder="Your name">
+    <input required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    <textarea required name="message" id="message" placeholder="Your message" minlength="12"></textarea>
+    <div id="privacy_policy_checkbox_container">
+        <div id="privacy_policy_checkbox_wrapper">
+            <img id="privacy_policy_checkbox_image" src="../../../assets/img/contact_me/check_box_outline_blank.svg" alt="">
+        </div>
+        <span id="privacy_policy_text_container">
+            I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+        </span>
+    </div>
+    <button type="submit" >
+        Send message
+    </button>
+</form>

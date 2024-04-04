@@ -1,12 +1,10 @@
 app-about-me {
   display: flex;
   justify-content: space-around;
-  height: 90vh;
 }
 
 app-my-skills{
     display: flex;
-    height: 90vh;
     align-items: center;
     flex-direction: column;
 }
@@ -15,6 +13,17 @@ app-portfolio{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+app-contact-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    background-image: url(../../assets/img/contact_me/contact_me_background.svg);
+    background-size: cover;
+    height: 1000px;
 }
 
 @media only screen and (max-width: 1225px){

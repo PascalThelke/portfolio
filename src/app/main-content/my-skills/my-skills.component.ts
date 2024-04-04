@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
-
+skillNameFirstContainer : string[] = ['Angular','TypeScript','Javascript','HTML','CSS'];
+skillNameSecondContainer : string[] = ['Firebase','Git','Scrum','Rest-Api','Material Design'];
 }
