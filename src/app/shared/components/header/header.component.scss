@@ -9,7 +9,7 @@ header {
   padding-left: 64px;
   position: fixed;
   z-index: 2;
-  width: 100%;
+  width: 100vw;
   top: 0;
   background-color: #FFFCF3;
   > div {
@@ -24,7 +24,7 @@ nav {
   gap: 32px;
   display: flex;
   align-items: center;
-  margin-right: 64px;
+  margin-right: 80px;
   > a {
     font-family: $main_font;
     font-weight: 700;
@@ -68,9 +68,7 @@ nav {
 
   nav{
     margin-right: 0px;
-    width: 100%;
-    justify-content: space-around;
-    gap: 0;
+    gap: 16px;
     >a{
       font-size: 20px;
     }

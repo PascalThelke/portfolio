@@ -83,6 +83,31 @@ span {
   }
 }
 
+.description_container_lowres {
+  width: 432px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  transition: all 75ms ease-in-out;
+  > h3 {
+    font-family: $main_font;
+    font-weight: $large_weight;
+    font-size: 45px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    cursor: pointer;
+    &:hover {
+      color: $primary_color;
+    }
+  }
+  > div {
+    display: flex;
+    gap: 16px;
+  }
+}
+
 #used_stack {
   @include fontDesingMedium();
   color: $primary_color;
@@ -145,6 +170,7 @@ a {
     }
   }
 
+  .description_container_lowres,
   .description_container {
     width: 90%;
   }
@@ -177,11 +203,11 @@ a {
     margin-left: -20px;
   }
 
-  .ml_4{
+  .ml_4 {
     margin-left: -4px;
   }
 
-  #used_stack{
+  #used_stack {
     font-size: 20px;
   }
 
@@ -196,4 +222,11 @@ a {
     padding: 4px;
   }
 
+  .description_container {
+    display: none;
+  }
+
+  .description_container_lowres{
+    display: flex;
+  }
 }

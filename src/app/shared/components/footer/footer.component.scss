@@ -91,11 +91,14 @@ footer{
 }
 
 .social_icons_container{
-  justify-content: space-evenly;
+  width: 136px;
 }
 }
 
 @media only screen and (max-width: 420px) {
-
+  footer{
+    gap: 32px;
+    height: 200px;
+  }
 }
 

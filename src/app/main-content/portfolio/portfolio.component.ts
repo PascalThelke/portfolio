@@ -10,5 +10,5 @@ import { SharkieComponent } from './sharkie/sharkie.component';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  
 }

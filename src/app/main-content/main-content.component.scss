@@ -25,7 +25,7 @@ app-contact-me{
     color:#FFFCF3;
     background-image: url(../../assets/img/contact_me/contact_me_background.svg);
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
 }
 
 .mt100{
@@ -42,9 +42,6 @@ app-contact-me{
         align-items: center;
     }
 
-    app-my-skills{
-        height: 80vh;
-    }
 
     h1{
         font-size: 56px !important;
