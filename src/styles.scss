@@ -3,7 +3,11 @@ body{
     max-width: 1920px;
 }
 
-
+html{
+  scroll-behavior: smooth;
+  background-color: #FFFCF3;
+  overflow-x: hidden;
+}
 
 
 /* syne-regular - latin */

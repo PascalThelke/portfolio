@@ -1,35 +1,49 @@
 app-about-me {
   display: flex;
   justify-content: space-around;
+
 }
 
 app-my-skills{
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
 }
 
 app-portfolio{
     display: flex;
     align-items: center;
     flex-direction: column;
+   
 }
 
 app-contact-me{
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    color: white;
+    color:#FFFCF3;
     background-image: url(../../assets/img/contact_me/contact_me_background.svg);
     background-size: cover;
-    height: 1000px;
+    height: 90vh;
+}
+
+.mt100{
+    margin-top: 100px;
+}
+
+.mt_extra{
+    margin-top: 280px !important;
 }
 
 @media only screen and (max-width: 1225px){
     app-about-me{
         flex-direction: column;
         align-items: center;
+    }
+
+    app-my-skills{
+        height: 80vh;
     }
 
     h1{
@@ -40,7 +54,7 @@ app-contact-me{
         font-size: 24px !important;
     }
 
-    .desgin_container{
+    .design_container{
         width: 332px !important;
     }
 
@@ -48,4 +62,12 @@ app-contact-me{
         margin-top: 324px !important;
     }
 
+    .project_container{
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .mt_extra{
+        margin-top: 96px !important;
+    }
 }

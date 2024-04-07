@@ -6,8 +6,9 @@ footer {
   align-items: center;
   justify-content: space-between;
   background-color: black;
-  color: white;
+  color: #FFFCF3;
   padding: 0px 64px 0px 64px;
+  text-wrap: nowrap;
   > div {
     display: flex;
     flex-direction: column;
@@ -43,17 +44,58 @@ footer {
 .legal_link {
   align-self: flex-end;
   text-decoration: none;
-  color: white;
+  color: #FFFCF3;
   font-family: $secondary_font;
   font-weight: $medium_weight;
   font-size: 16px;
-
-  &:hover {
-    font-weight: 700;
-    text-decoration: underline;
-    text-decoration-color: $primary_color;
-    text-decoration-thickness: 3px;
-    gap: 3px;
-   
+  position: relative;
+  &:hover{
+    font-weight: bold;
   }
 }
+
+.legal_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%; 
+  border-bottom: 3px solid transparent; 
+  transition: width 0.3s ease-out; 
+}
+
+.legal_link:hover::after {
+  width: 50%; 
+  border-color: $primary_color; 
+  font-weight: 700;
+  transform: translateX(100%);
+}
+
+
+@media only screen and (max-width: 720px) {
+footer{
+  padding: 0px;
+  flex-direction: column-reverse;
+  justify-content: unset;
+  gap: 10px;
+  >div{
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    >span{
+      font-size: 16px;
+    }
+  }
+}
+
+.social_icons_container{
+  justify-content: space-evenly;
+}
+}
+
+@media only screen and (max-width: 420px) {
+
+}
+

@@ -18,7 +18,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = $params->name;
             $message = $params->message;
     
-            $recipient = 'DEINE@MAIL.de';  // I have to change it until i have a webhost provider
+            $recipient = 'kontakt@pascal-thelke.de';  // I have to change it until i have a webhost provider
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     

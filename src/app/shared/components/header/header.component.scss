@@ -1,3 +1,6 @@
+@import "../../../app.component.scss";
+@import "../../../main-content/main-content.component.scss";
+
 header {
   height: 92px;
   display: flex;
@@ -5,10 +8,10 @@ header {
   align-items: center;
   padding-left: 64px;
   position: fixed;
-  z-index: 1;
-  width: 96vw;
+  z-index: 2;
+  width: 100%;
   top: 0;
-  background-color: white;
+  background-color: #FFFCF3;
   > div {
     > img {
       height: 40px;
@@ -16,20 +19,68 @@ header {
   }
 }
 
-.burger_menu {
-  height: 32px;
-  width: 40px;
+nav {
+  height: 40px;
+  gap: 32px;
   display: flex;
-  flex-direction: column;
-  gap: 17px;
+  align-items: center;
   margin-right: 64px;
-  &:hover {
-    cursor: pointer;
+  > a {
+    font-family: $main_font;
+    font-weight: 700;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    transition: all 75ms ease-in-out;
+    position: relative;
+    &:hover {
+      scale: 1.1;
+      color: $primary_color;
+    }
   }
-  > div {
-    width: 40px;
-    height: 0px;
-    background-color: black;
-    border: 2px solid black;
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 3px solid transparent;
+    transition: width 0.3s ease-out;
+  }
+
+  a:focus::after,
+  a:hover::after {
+    width: 50%; 
+    border-color: black; 
+    transform: translateX(100%);
+  }
+
+}
+
+@media only screen and (max-width: 720px){
+  header{
+      padding-left: 0;
+      justify-content: center;
+      >div{
+          display: none;
+      }
+  }
+
+  nav{
+    margin-right: 0px;
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+    >a{
+      font-size: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px){
+  nav{
+    >a{
+      font-size: 16px;
+    }
   }
 }
