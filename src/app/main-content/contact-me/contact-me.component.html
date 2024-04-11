@@ -9,7 +9,7 @@
     @if (!name.valid && name.touched) {
         <span class="invalid_entry_textfield">Your name is required</span>
     }
-    <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}">
     @if (!email.valid && email.touched) {
         <span class="invalid_entry_textfield">Your email is required </span>
     }

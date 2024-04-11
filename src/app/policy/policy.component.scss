@@ -9,7 +9,7 @@
 }
 
 .legal_list {
-  list-style-type: disc;
+  list-style-type: square;
   padding-left: 20px;
 }
 
@@ -21,7 +21,7 @@ h3 {
 
 h1 {
   font-family: $main_font;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 56px;
 }
 
@@ -32,7 +32,7 @@ h2 {
 }
 
 h3 {
-  font-family: $secondary_font;
+  font-family: $main_font;
   font-weight: 600;
   font-size: 32px;
 }
@@ -53,9 +53,9 @@ a {
 
 li,
 span {
-  font-family: $main_font;
+  font-family: $secondary_font;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 b {
