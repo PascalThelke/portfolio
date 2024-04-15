@@ -123,7 +123,7 @@ button {
   align-self: center;
   background-color: black;
   color: #fffcf3;
-  filter: brightness(80%);
+  filter: brightness(100%);
   @include fontDesingMedium();
   transition: all 125ms ease-in-out;
   cursor: pointer;
@@ -131,6 +131,9 @@ button {
     width: 312px;
     filter: brightness(100%);
     font-weight: 600;
+  }
+  &:focus {
+    background-color: #fffcf3;
   }
 }
 
@@ -141,6 +144,19 @@ button {
   color: red;
   margin-left: 16px;
   height: 16px;
+}
+
+#disabled_button {
+  height: 68px;
+  min-height: 68px;
+  width: 269px;
+  border: 4px solid #fffcf3;
+  align-self: center;
+  background-color: black;
+  color: #fffcf3;
+  filter: brightness(50%);
+  @include fontDesingMedium();
+  cursor: default;
 }
 
 @media only screen and (max-width: 720px) {

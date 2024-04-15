@@ -11,10 +11,12 @@ header {
   z-index: 2;
   width: 100vw;
   top: 0;
-  background-color: #FFFCF3;
+  background-color: #fffcf3;
   > div {
-    > img {
-      height: 40px;
+    > a {
+      > img {
+        height: 40px;
+      }
     }
   }
 }
@@ -50,34 +52,33 @@ nav {
 
   a:focus::after,
   a:hover::after {
-    width: 50%; 
-    border-color: black; 
+    width: 50%;
+    border-color: black;
     transform: translateX(100%);
   }
-
 }
 
-@media only screen and (max-width: 720px){
-  header{
-      padding-left: 0;
-      justify-content: center;
-      >div{
-          display: none;
-      }
+@media only screen and (max-width: 720px) {
+  header {
+    padding-left: 0;
+    justify-content: center;
+    > div {
+      display: none;
+    }
   }
 
-  nav{
+  nav {
     margin-right: 0px;
     gap: 16px;
-    >a{
+    > a {
       font-size: 20px;
     }
   }
 }
 
-@media only screen and (max-width: 420px){
-  nav{
-    >a{
+@media only screen and (max-width: 420px) {
+  nav {
+    > a {
       font-size: 16px;
     }
   }

@@ -81,50 +81,49 @@ h1 {
   }
 }
 
-@media only screen and (max-width: 720px){
-  .design_container{
+@media only screen and (max-width: 720px) {
+  .design_container {
     width: 224px !important;
   }
 
-  .landing_page{
-    >a{
+  .landing_page {
+    > a {
       margin-left: -100px;
     }
   }
 
-  h1{
+  h1 {
     font-size: 48px !important;
     margin-top: 48px;
   }
 
-  #scroll_down_container{
-    margin-right: 0px;
+  #scroll_down_container {
+    margin-right: 16px;
   }
 }
 
-@media only screen and (max-width: 420px){
-  h1{
+@media only screen and (max-width: 420px) {
+  h1 {
     font-size: 36px !important;
-
   }
 
-  .design_container{
+  .design_container {
     width: 124px !important;
   }
 
-  .name_container{
+  .name_container {
     font-size: 16px !important;
   }
 
-  .landing_page{
+  .landing_page {
     margin-top: 100px;
-    >a{
+    > a {
       font-size: 20px;
     }
   }
 
-  #scroll_down_container{
-    >span{
+  #scroll_down_container {
+    > span {
       font-size: 20px;
     }
   }

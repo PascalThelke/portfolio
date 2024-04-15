@@ -39,6 +39,7 @@ export class ContactMeComponent {
         .subscribe({
           next: (response: any) => {
             ngForm.resetForm();
+            window.location.href = "mail-succeed";
           },
           error: (error: any) => {
             console.error(error);
@@ -47,6 +48,7 @@ export class ContactMeComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+      window.location.href = "mail-succeed";
     }
   }
 

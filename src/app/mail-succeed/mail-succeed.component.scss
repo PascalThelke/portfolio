@@ -1,0 +1,19 @@
+@import "../policy/policy.component.scss";
+
+div {
+  height: 52vh;
+  display: flex;
+  align-items: center;
+//   justify-content: center;
+  flex-direction: column;
+  margin-top: 324px;
+  > span,
+  a {
+    font-family: Overpass, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+  }
+  a:hover{
+    font-weight: 800;
+  }
+}

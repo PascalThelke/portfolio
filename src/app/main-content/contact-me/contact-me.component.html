@@ -5,30 +5,50 @@
     <p>Say hello! let's discuss your ideas and make it happen</p>
 </div>
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name" placeholder="Your name">
+    <!-- hier einen inputfield wrapper setzten -->
+    <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name"
+        placeholder="Your name">
+    <!-- hier einen inputfield wrapper setzten -->
     @if (!name.valid && name.touched) {
-        <span class="invalid_entry_textfield">Your name is required</span>
+    <span class="invalid_entry_textfield">Your name is required</span>
     }
-    <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}">
+    <!-- hier einen inputfield wrapper setzten -->
+    <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email"
+        placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}">
+    <!-- hier einen inputfield wrapper setzten -->
     @if (!email.valid && email.touched) {
-        <span class="invalid_entry_textfield">Your email is required </span>
+    <span class="invalid_entry_textfield">plese enter a valid email</span>
+    } @else if (!email.valid && !email.touched) {
+    <span class="invalid_entry_textfield">Your email is required </span>
     }
-    <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message" placeholder="Your message" minlength="12"></textarea>
+    <!-- hier einen inputfield wrapper setzten -->
+    <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
+        placeholder="Your message" minlength="12"></textarea>
+    <!-- hier einen inputfield wrapper setzten -->
     @if (!message.valid && message.touched) {
-        <span class="invalid_entry_textfield">Your message ist empty. <br> Please enter a message with at least 12 digits </span>
+    <span class="invalid_entry_textfield">Please enter a message with at least 12 digits
+    </span>
     }
     <div id="privacy_policy_checkbox_container">
         <div id="privacy_policy_checkbox_wrapper">
-            <img #privacyPolicyCheckboxImage (click)="acceptPolicy($event)" id="privacy_policy_checkbox_image" src="../../../assets/img/contact_me/check_box_outline_blank.svg" alt="">
+            <img #privacyPolicyCheckboxImage (click)="acceptPolicy($event)" id="privacy_policy_checkbox_image"
+                src="../../../assets/img/contact_me/check_box_outline_blank.svg" alt="">
         </div>
         <span id="privacy_policy_text_container">
             I've read the <a href="policy">privacy policy</a> and agree to the processing of my data as outlined.
         </span>
     </div>
     @if (!acceptedPolicy) {
-        <span class="invalid_entry_textfield">You have to accept the privacy policy </span>
+    <span class="invalid_entry_textfield">You have to accept the privacy policy </span>
     }
-    <button type="submit" >
+    @if (acceptedPolicy && email.valid && message.valid && name.valid) {
+    <button type="submit">
         Send message
     </button>
+    }@else {
+    <button id="disabled_button" disabled>
+        Send message
+    </button>
+    }
+
 </form>
