@@ -62,6 +62,7 @@ h1 {
   margin-right: 64px;
   gap: 6px;
   margin-top: -111px;
+  width: 50px;
   > span {
     @include fontDesingSmall();
     cursor: default;

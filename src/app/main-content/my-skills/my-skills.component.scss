@@ -85,7 +85,7 @@
 @media only screen and (max-width: 720px) {
   .headline_container {
     width: 332px;
-    margin-bottom: -24px;
+    margin-bottom: -48px;
     > h2 {
       font-size: 44px;
     }
@@ -93,7 +93,6 @@
 
   .my_skills_container{
     flex-direction: row;
-    height: 80vh;
     gap: 0px;
     padding: 20px;
     >div{

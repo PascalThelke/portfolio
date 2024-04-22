@@ -6,13 +6,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 64px;
+  padding: 0px 64px 0px 64px;
   position: fixed;
   z-index: 2;
-  width: 100vw;
+  width: 92%;
   top: 0;
   background-color: #fffcf3;
   > div {
+    display: flex;
+    gap: 20px;
     > a {
       > img {
         height: 40px;
@@ -35,6 +37,7 @@ nav {
     color: black;
     transition: all 75ms ease-in-out;
     position: relative;
+    text-wrap: nowrap;
     &:hover {
       scale: 1.1;
       color: $primary_color;
@@ -58,13 +61,51 @@ nav {
   }
 }
 
-@media only screen and (max-width: 720px) {
-  header {
-    padding-left: 0;
-    justify-content: center;
-    > div {
-      display: none;
+.translate_container {
+  display: flex;
+  // width: 467px;
+  height: 36px;
+  justify-content: end;
+  align-items: center;
+  gap: 10px;
+  p {
+    cursor: pointer;
+    font-family: $main_font;
+    font-weight: 700;
+    font-size: 24px;
+    &:hover {
+      scale: 1.1;
+      color: $primary_color;
     }
+  }
+  p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 3px solid transparent;
+    transition: width 0.3s ease-out;
+  }
+
+  p:focus::after,
+  p:hover::after {
+    width: 50%;
+    border-color: black;
+    transform: translateX(100%);
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  header {
+    padding: 0;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #header_logo {
+    display: none;
   }
 
   nav {

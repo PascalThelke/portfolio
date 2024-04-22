@@ -1,21 +1,23 @@
 app-about-me {
   display: flex;
   justify-content: space-around;
+  width: 100vw;
 
 }
 
 app-my-skills{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    height: 100vh;
+    width: 100vw;
 }
 
 app-portfolio{
     display: flex;
     align-items: center;
     flex-direction: column;
-   
+    width: 100vw;
 }
 
 app-contact-me{
@@ -25,7 +27,7 @@ app-contact-me{
     color:#FFFCF3;
     background-image: url(../../assets/img/contact_me/contact_me_background.svg);
     background-size: cover;
-    height: 100vh;
+    width: 100vw;
 }
 
 .mt100{
@@ -68,3 +70,11 @@ app-contact-me{
         margin-top: 96px !important;
     }
 }
+
+@media only screen and (max-width: 420px) {
+    app-portfolio,
+    app-contact-me,
+    app-my-skills{
+        width: auto;
+    }
+  }

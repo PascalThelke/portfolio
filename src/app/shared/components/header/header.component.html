@@ -1,13 +1,21 @@
 <header>
     <div>
         <a href="#bottom">
-            <img src="../../../../assets/img/personal_logo.png" alt="">
+            <img id="header_logo" src="../../../../assets/img/personal_logo.png" alt="">
         </a>
+        <div class="translate_container">
+            <p (click)="translate.switchLanguage('en')">EN</p>
+            <p>|</p>
+            <p (click)="translate.switchLanguage('de')">DE</p>
+        </div>
     </div>
     <nav>
-       <a href="#about_me">About</a>
-       <a href="#skills">Skills</a>
-       <a href="#portfolio">Portfolio</a>
-       <a href="#contact">Contact</a>
+        <a href="#about_me">{{ 'About' | translate }}</a>
+        <a href="#skills">{{ 'Skills' | translate }}</a>
+        <a href="#portfolio">{{ 'Portfolio' | translate }}</a>
+        <a href="#contact">{{ 'Contact' | translate }}</a>
     </nav>
+    <img [src]="getImageSrc()" alt="" (click)="onClick(); 
+    // openNav()
+    ">
 </header>

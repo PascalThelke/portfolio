@@ -1,53 +1,71 @@
 <div id="contact"></div>
-<h2>Say Hi!</h2>
+<h2>{{ "Say Hi!" | translate }}</h2>
 <div>
-    <span>Want to discuss a new project?</span>
-    <p>Say hello! let's discuss your ideas and make it happen</p>
+    <span>{{ "Want to discuss a new project?" | translate }}</span>
+    <p>{{ "Say hello! let's discuss your ideas and make it happen" | translate }}</p>
 </div>
 <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <!-- hier einen inputfield wrapper setzten -->
-    <input #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name" name="name"
-        placeholder="Your name">
-    <!-- hier einen inputfield wrapper setzten -->
-    @if (!name.valid && name.touched) {
-    <span class="invalid_entry_textfield">Your name is required</span>
+    <div class="input_wrapper">
+        <input autocomplete="name" #name="ngModel" [(ngModel)]="contactData.name" required type="text" id="name"
+            name="name" placeholder="{{ 'Your name' | translate }}">
+    </div>
+
+    @if (!name.valid && name.touched ) {
+    <span class="invalid_entry_textfield">{{ "Your name is required" | translate }}</span>
+    }@else {
+    <span class="invalid_entry_textfield"></span>
     }
-    <!-- hier einen inputfield wrapper setzten -->
-    <input #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email" name="email"
-        placeholder="Your email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}">
-    <!-- hier einen inputfield wrapper setzten -->
+
+    <div class="input_wrapper">
+        <input autocomplete="email" #email="ngModel" [(ngModel)]="contactData.email" required type="email" id="email"
+            name="email" placeholder="{{ 'Your email' | translate }}" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,6}">
+    </div>
+
     @if (!email.valid && email.touched) {
-    <span class="invalid_entry_textfield">plese enter a valid email</span>
-    } @else if (!email.valid && !email.touched) {
-    <span class="invalid_entry_textfield">Your email is required </span>
+    <span class="invalid_entry_textfield">{{ "plese enter a valid email" | translate }}</span>
+    } @else {
+    <span class="invalid_entry_textfield"></span>
     }
-    <!-- hier einen inputfield wrapper setzten -->
-    <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
-        placeholder="Your message" minlength="12"></textarea>
-    <!-- hier einen inputfield wrapper setzten -->
+
+    <!-- @else if (!email.valid && !email.touched) {
+        <span class="invalid_entry_textfield">{{ "Your email is required" | translate }} </span>
+        } -->
+
+    <div class="input_wrapper">
+        <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
+            placeholder="{{ 'Your message' | translate }}" minlength="12"></textarea>
+    </div>
+
     @if (!message.valid && message.touched) {
-    <span class="invalid_entry_textfield">Please enter a message with at least 12 digits
+    <span class="invalid_entry_textfield">{{ "Please enter a message" | translate }}
     </span>
     }
+    @else {
+    <span class="invalid_entry_textfield"></span>
+    }
+
     <div id="privacy_policy_checkbox_container">
         <div id="privacy_policy_checkbox_wrapper">
             <img #privacyPolicyCheckboxImage (click)="acceptPolicy($event)" id="privacy_policy_checkbox_image"
                 src="../../../assets/img/contact_me/check_box_outline_blank.svg" alt="">
         </div>
         <span id="privacy_policy_text_container">
-            I've read the <a href="policy">privacy policy</a> and agree to the processing of my data as outlined.
+            {{ "I've read the" | translate }} <a href="policy">{{ "privacy policy" | translate }}</a> {{ "and agree to the processing of my data as outlined." | translate }}
         </span>
     </div>
+
     @if (!acceptedPolicy) {
-    <span class="invalid_entry_textfield">You have to accept the privacy policy </span>
+    <span class="invalid_entry_textfield">{{ "You have to accept the privacy policy" | translate }} </span>
+    }@else {
+    <span class="invalid_entry_textfield"></span>
     }
     @if (acceptedPolicy && email.valid && message.valid && name.valid) {
     <button type="submit">
-        Send message
+        {{ "Send message" | translate }}
     </button>
     }@else {
     <button id="disabled_button" disabled>
-        Send message
+        {{ "Send message" | translate }}
     </button>
     }
 

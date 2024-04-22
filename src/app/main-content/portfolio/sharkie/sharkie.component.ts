@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from '../../../translation.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-sharkie',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './sharkie.component.html',
-  styleUrl: './sharkie.component.scss'
+  styleUrl: './sharkie.component.scss',
 })
 export class SharkieComponent {
-
+  translate = inject(TranslationService);
 }
