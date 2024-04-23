@@ -22,3 +22,8 @@ $large_weight: 800;
     font-weight: $large_weight;
     font-size: 78px;
   }
+
+  app-footer,
+  app-header{
+    width: 100vw;
+  }

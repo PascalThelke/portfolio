@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { TranslationService } from '../../../translation.service';
 import { TranslateModule } from '@ngx-translate/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
@@ -35,36 +36,44 @@ export class HeaderComponent {
   ngOnInit() {
     clearInterval(this.interval);
   }
-  
+
   onClick() {
     this.isMenuOpen = !this.isMenuOpen;
     this.currentIndex = 0;
     this.startAnimation();
   }
-  
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
   startAnimation() {
-    const animationImages = this.isMenuOpen ? this.openAnimationImages : this.closeAnimationImages;
-    this.currentIndex = 0; 
+    const animationImages = this.isMenuOpen
+      ? this.openAnimationImages
+      : this.closeAnimationImages;
+    this.currentIndex = 0;
     this.interval = setInterval(() => {
       this.showNextImage(animationImages);
     }, 125);
   }
-  
+
   showNextImage(images: string[]) {
-   if (this.currentIndex >= images.length -1 ) {
-     clearInterval(this.interval);
-   } else {
-     this.currentIndex++;
-   }
+    if (this.currentIndex >= images.length - 1) {
+      clearInterval(this.interval);
+    } else {
+      this.currentIndex++;
+    }
   }
-  
+
   getImageSrc(): string {
-   if (!this.isMenuOpen && !this.visitedFirst) { 
-     return this.openAnimationImages[0];
-   } else { 
-     const animationImages = this.isMenuOpen ? this.openAnimationImages : this.closeAnimationImages;
-     this.visitedFirst = true;
-     return animationImages[this.currentIndex];
-   }
+    if (!this.isMenuOpen && !this.visitedFirst) {
+      return this.openAnimationImages[0];
+    } else {
+      const animationImages = this.isMenuOpen
+        ? this.openAnimationImages
+        : this.closeAnimationImages;
+      this.visitedFirst = true;
+      return animationImages[this.currentIndex];
+    }
   }
 }

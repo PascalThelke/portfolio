@@ -9,9 +9,14 @@ header {
   padding: 0px 64px 0px 64px;
   position: fixed;
   z-index: 2;
-  width: 92%;
+  width: 100%;
+  box-sizing: border-box;
   top: 0;
   background-color: #fffcf3;
+  > img {
+    cursor: pointer;
+    width: 40px;
+  }
   > div {
     display: flex;
     gap: 20px;
@@ -25,14 +30,24 @@ header {
 
 nav {
   height: 40px;
-  gap: 32px;
+  gap: 48px;
   display: flex;
   align-items: center;
-  margin-right: 100px;
+  justify-content: center;
+  position: absolute;
+  flex-direction: column;
+  height: 102vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  /* margin-top: 92px; */
+  background-color: #fffcf3;
   > a {
     font-family: $main_font;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 72px;
     text-decoration: none;
     color: black;
     transition: all 75ms ease-in-out;
@@ -96,31 +111,83 @@ nav {
   }
 }
 
+.nav_footer {
+  background-image: url(../../../../assets/img/contact_me/contact_me_background.svg);
+  width: 100vw;
+  background-size: cover;
+  height: 30%;
+  color: #fffcf3;
+  display: flex;
+  align-items: center;
+  margin-bottom: -88px;
+  animation: all 125ms ease-in-out forwards;
+  > h2 {
+    padding-left: 64px;
+    font-family: $main_font;
+    font-weight: 800;
+    font-size: 72px;
+    cursor: default;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.3s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
 @media only screen and (max-width: 780px) {
   header {
-    padding: 0;
-    justify-content: center;
-    flex-direction: column;
+    padding: 0px 32px 0px 32px;
     width: 100%;
+  }
+
+  .nav {
+    > a {
+      font-size: 76px;
+    }
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  nav {
+    > a {
+      font-size: 56px;
+    }
   }
 
   #header_logo {
     display: none;
   }
 
-  nav {
-    margin-right: 0px;
-    gap: 16px;
-    > a {
-      font-size: 20px;
+  header {
+    padding: 0px 16px 0px 16px;
+    > div {
+      gap: 0;
     }
   }
-}
 
-@media only screen and (max-width: 420px) {
-  nav {
-    > a {
-      font-size: 16px;
-    }
+  .nav_footer {
+    margin-bottom: -224px;
   }
 }
