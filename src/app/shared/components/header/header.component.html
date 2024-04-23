@@ -11,12 +11,13 @@
     </div>
     @if (isMenuOpen) {
     <nav [ngClass]="isMenuOpen ? 'slide-in' : 'slide-out'">
-        <a href="#about_me" (click)="toggleMenu()">{{ 'About' | translate }}</a>
-        <a href="#skills" (click)="toggleMenu()">{{ 'Skills' | translate }}</a>
-        <a href="#portfolio" (click)="toggleMenu()">{{ 'Portfolio' | translate }}</a>
-        <a href="#contact" (click)="toggleMenu()">{{ 'Contact' | translate }}</a>
+        <a href="#about_me" (click)="onClick()">{{ 'About' | translate }}</a>
+        <a href="#skills" (click)="onClick()">{{ 'Skills' | translate }}</a>
+        <a href="#portfolio" (click)="onClick()">{{ 'Portfolio' | translate }}</a>
+        <a href="#contact" (click)="onClick()">{{ 'Contact' | translate }}</a>
         <div class="nav_footer">
             <h2>Say Hi!</h2>
+            <a href="mailto:kontakt@pascal-thelke.de">kontakt&#64;pascal-thelke.de</a>
         </div>
     </nav>
     }

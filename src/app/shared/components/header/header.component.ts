@@ -43,10 +43,6 @@ export class HeaderComponent {
     this.startAnimation();
   }
 
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-  }
-
   startAnimation() {
     const animationImages = this.isMenuOpen
       ? this.openAnimationImages
