@@ -27,13 +27,9 @@
     <span class="invalid_entry_textfield"></span>
     }
 
-    <!-- @else if (!email.valid && !email.touched) {
-        <span class="invalid_entry_textfield">{{ "Your email is required" | translate }} </span>
-        } -->
-
     <div class="input_wrapper">
         <textarea #message="ngModel" [(ngModel)]="contactData.message" required name="message" id="message"
-            placeholder="{{ 'Your message' | translate }}" minlength="12"></textarea>
+            placeholder="{{ 'Your message' | translate }}" minlength="4"></textarea>
     </div>
 
     @if (!message.valid && message.touched) {
@@ -54,7 +50,7 @@
         </span>
     </div>
 
-    @if (!acceptedPolicy) {
+    @if (!acceptedPolicy  && (message.touched || email.touched || name.touched) ) {
     <span class="invalid_entry_textfield">{{ "You have to accept the privacy policy" | translate }} </span>
     }@else {
     <span class="invalid_entry_textfield"></span>

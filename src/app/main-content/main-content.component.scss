@@ -2,6 +2,7 @@ app-about-me {
   display: flex;
   justify-content: space-around;
   width: 100vw;
+  max-width: 1920px;
 
 }
 
@@ -11,6 +12,7 @@ app-my-skills{
     justify-content: center;
     flex-direction: column;
     width: 100vw;
+    max-width: 1920px;
 }
 
 app-portfolio{
@@ -18,6 +20,7 @@ app-portfolio{
     align-items: center;
     flex-direction: column;
     width: 100vw;
+    max-width: 1920px;
 }
 
 app-contact-me{
@@ -28,6 +31,7 @@ app-contact-me{
     background-image: url(../../assets/img/contact_me/contact_me_background.svg);
     background-size: cover;
     width: 100vw;
+    max-width: 1920px;
 }
 
 .mt100{

@@ -1,12 +1,15 @@
 body{
     margin: 0px;
     max-width: 1920px;
+
 }
 
 html{
   scroll-behavior: smooth;
   background-color: #FFFCF3;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 
