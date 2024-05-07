@@ -24,7 +24,7 @@ form {
   background-color: black;
   color: #fffcf3;
   outline: none;
-  width: 90%;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -181,8 +181,9 @@ button {
   font-size: 15px;
   color: red;
   height: 56px;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   opacity: 0;
   animation: fadeIn 125ms ease-in-out forwards;

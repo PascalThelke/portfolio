@@ -30,6 +30,7 @@ header {
 }
 
 nav {
+  max-width: 1920px;
   height: 40px;
   gap: 48px;
   display: flex;
@@ -115,6 +116,7 @@ nav {
 .nav_footer {
   background-image: url(../../../../assets/img/contact_me/contact_me_background.svg);
   width: 100vw;
+  max-width: 1920px;
   background-size: cover;
   height: 30%;
   color: #fffcf3;

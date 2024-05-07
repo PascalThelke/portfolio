@@ -18,13 +18,16 @@ $large_weight: 800;
 }
 
 @mixin fontDesingLarge() {
-    font-family: $main_font;
-    font-weight: $large_weight;
-    font-size: 78px;
-  }
+  font-family: $main_font;
+  font-weight: $large_weight;
+  font-size: 78px;
+}
 
-  app-footer,
-  app-header{
-    width: 100vw;
-    max-width: 1920px;
-  }
+app-footer,
+app-header {
+  display: block;
+  width: 100vw;
+  max-width: 1920px;
+}
+
+

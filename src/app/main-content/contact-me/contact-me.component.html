@@ -50,7 +50,7 @@
         </span>
     </div>
 
-    @if (!acceptedPolicy  && (message.touched || email.touched || name.touched) ) {
+    @if (!acceptedPolicy  && (message.valid && email.valid && name.valid) ) {
     <span class="invalid_entry_textfield">{{ "You have to accept the privacy policy" | translate }} </span>
     }@else {
     <span class="invalid_entry_textfield"></span>
